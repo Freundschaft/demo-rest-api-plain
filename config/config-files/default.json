@@ -1,0 +1,27 @@
+{
+  "mongodb": {
+    "url": "mongodb://localhost/demo-rest-api",
+    "loggingEnabled": true
+  },
+  "corsWhiteList": [
+    "http://localhost:3000",
+    "http://localhost:3001"
+  ],
+  "bodyParser": {
+    "urlencoded": {
+      "extended": true,
+      "limit": "5mb"
+    },
+    "json": {
+      "limit": "5mb"
+    }
+  },
+  "auth": {
+    "minimumPasswordLength": 6,
+    "jwt": {
+      "token_name": "auth_token",
+      "secret": "totallysecret",
+      "algorithm": "HS512"
+    }
+  }
+}
